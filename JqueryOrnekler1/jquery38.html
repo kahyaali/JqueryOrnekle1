@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <style>
+div { background:#ebebeb;
+font-weight:bold;
+font-size:16px;
+width: 300px;      }
+</style>
+</head>
+<body>
+  <button id="button1">Toggle</button>
+<p>Merhaba</p>
+<p style="display: none">Hoşçakal</p>
+    <hr />
+<button id="button2">Toggle</button>
+    <div>Selam güzel div</div><br />
+    <div>Başka güzel bir div</div>
+<script>
+ 
+$("#button1").click(function () {
+$("p").toggle();
+});
+     
+ 
+$("#button2").click(function () {
+$("div").toggle("slow");
+}); 
+</script>
+ 
+</body>
+</html>​

@@ -1,0 +1,25 @@
+<html>
+  <head>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $("#div2").toggle();
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="div1">
+      <p>Açık Kalacak Paragraf</p>
+    </div>
+    <div id="div2" style="display:none;">
+      <p>Gizlenecek Paragraf</p>
+    </div>
+    <button>Toggle Buton</button>
+
+  </body>
+</html>

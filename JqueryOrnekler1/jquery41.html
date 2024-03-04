@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+ 
+<button>fadeToggle button</button>
+<p>Bu paragraf yavaş ve lineer bir şekilde kaybolacak, ikinci tılamada belirecek.</p>
+ 
+<script>
+$("button:first").click(function() {
+$("p:first").fadeToggle("slow", "linear");
+});
+</script>
+ 
+</body>
+</html>

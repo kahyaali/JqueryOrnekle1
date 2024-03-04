@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+ 
+   <style>
+   div { margin:3px; width: 100px; height: 150px; background-color: red; display: none; }
+   </style>
+</head>
+<body>
+    <button id="slidedown">.slideDown()</button>
+    <button id="slideup">.slideUp()</button>
+    <div></div>
+<script>
+$('#slidedown').click(function() {
+  $('div').slideDown('slow'); // Hiç parametre girmeseydik orta hızda yani 400 milisaniyede işlem yapılacaktı.
+});
+ 
+$('#slideup').click(function() {
+  $('div').slideUp('slow');
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Ornekleri</title>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <style>
+        .css-toggle{
+         color:white;
+         background-color:tomato;
+         }
+        .css-toggle:hover span{display:block;}
+ 
+       .css-toggle span{
+        display:none;
+        color:#111;
+        }
+    </style>
+</head>
+<body>
+    <!-- css ile açılır kapanır div yapma -->
+    <div class="css-toggle">CSS ile Gizle/Göster
+        <span>Bu eleman <b>.css-toogle</b>'ın içerisinde olması gerek</span>
+      </div>
+      <br><br><br>
+
+  <hr>    
+      <!-- jquery ile açılır kapanır div yapma -->
+      <div class="js-toggle">jQuery ile Gizle/Göster
+        <span style="background-color: red;">Bu elemanın nerede olduğunun önemi yok.</span>
+      </div>
+      
+<script>
+$(".js-toggle, .js-toggle span").on("mouseenter", function() {
+        $(".js-toggle span").css( "display", "block" );
+        }).on("mouseleave", function() {
+        $(".js-toggle span").css( "display", "none" );
+        });
+        
+</script>
+    
+</body>
+</html>

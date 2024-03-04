@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+background:#ebebeb;
+width:220px;
+border:2px dotted black;
+}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<button id="calistir">Çalıştır</button>
+<div id="bolum">Selam!</div>
+<script>
+$("#calistir").click(function(){
+$("#bolum").animate({
+width: "50%",
+opacity: 0.6,
+marginLeft: "0.8in",
+fontSize: "2em",
+borderWidth: "12px"
+}, 1500 );
+});
+</script>
+ 
+</body>
+</html>

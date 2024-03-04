@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+div { margin:3px; width:40px; height:40px;
+    position:absolute; left:0px; top:30px;
+    background:green; display:none; }
+div.yenirenk { background:blue; }
+</style>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="basla">Başla</button>
+<button id="dur">Dur</button>
+<div></div>
+<script>
+$("#basla").click(function () {
+ 
+  var myDiv = $("div");
+  myDiv.show("slow");
+  myDiv.animate({left:'+=200'},5000);
+  myDiv.queue(function () {
+    var _this = $(this);
+    _this.addClass("yenirenk");
+    _this.dequeue();
+  });
+ 
+  myDiv.animate({left:'-=200'},1500);
+  myDiv.queue(function () {
+    var _this = $(this);
+    _this.removeClass("yenirenk");
+    _this.dequeue();
+  });
+  myDiv.slideUp();
+ 
+});
+ 
+$("#dur").click(function () {
+  var myDiv = $("div");
+  myDiv.clearQueue();
+  myDiv.stop();
+});</script>
+ 
+</body>
+</html>

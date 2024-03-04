@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>div {
+position: absolute;
+background-color: #ebebeb;
+left: 0px;
+top:30px;
+width: 60px;
+height: 60px;
+margin: 5px;
+}
+</style>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <button id="ileri">ileri</button>
+<button id="dur">DUR!</button>
+<button id="geri">Geri</button>
+<div class="block"></div>
+<script>
+/* Start animation */
+$("#ileri").click(function(){
+$(".block").animate({left: '+=100px'}, 2000);
+});
+ 
+/* Stop animation when button is clicked */
+$("#dur").click(function(){
+$(".block").stop();
+});
+ 
+/* Start animation in the opposite direction */
+$("#geri").click(function(){
+$(".block").animate({left: '-=100px'}, 2000);
+});
+ 
+</script>
+ 
+</body>
+</html>

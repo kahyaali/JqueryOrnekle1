@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<a href="#">Bana tıkla</a>
+<p>Bana da tıkla</p>
+<button>Kayıpları göster :)</button>
+<script>
+$("a").click(function ( event ) {
+event.preventDefault(); // sayfada başka fonksiyonların çalışmasını önlüyoruz
+$(this).hide();
+});
+ 
+$("p").click(function ( event ){
+$(this).hide('slow'); 
+});
+ 
+$("button").click(function ( event ) {
+$("a").show();
+$("p").show('slow');
+});
+</script>
+ 
+</body>
+</html>
